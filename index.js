@@ -7,7 +7,7 @@ http.createServer((req, res) => {
     const result = `${getTimeInformation()}${getMachineInformation()}`;
     res.setHeader("Content-Type", "text/html; charset=utf-8");
     res.end(result);
-}).listen(80);
+}).listen(3000);
 
 function getMachineInformation() {
     const cpu = `<h4>CPU INFO</h4><pre>Core: ${os.cpus().length}\nName: ${os.cpus()[0].model}\nSpeed: ${os.cpus()[0].speed}</pre>`;
