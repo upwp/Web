@@ -11,7 +11,7 @@ http.createServer((req, res) => {
 
 function getMachineInformation() {
     const cpu = `<h4>CPU INFO</h4><pre>Core: ${os.cpus().length}\nName: ${os.cpus()[0].model}\nSpeed: ${os.cpus()[0].speed}</pre>`;
-    const _os = `<h4>OS</h4><pre>Name: ${os.hostname}\nUptime: ${os.uptime}\nPlatform: ${os.platform}\Release: ${os.release}\nArch: ${os.arch}\nMarchine Type: ${os.machine}\nMemory: ${Math.floor((os.totalmem - os.freemem) / 1024 / 1024)}/ ${Math.floor(os.totalmem / 1000 / 1000)} MB</pre>`
+    const _os = `<h4>OS</h4><pre>Name: ${os.hostname}\nUptime: ${os.uptime}\nPlatform: ${os.platform}\nRelease: ${os.release}\nArch: ${os.arch}\nMarchine Type: ${os.machine}\nMemory: ${Math.floor((os.totalmem - os.freemem) / 1024 / 1024)}/ ${Math.floor(os.totalmem / 1000 / 1000)} MB</pre>`
     return cpu + _os;
 }
 
